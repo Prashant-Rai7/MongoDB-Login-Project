@@ -23,10 +23,9 @@ try {
   db.on("error......", console.error.bind(console, "connection error: "));
 }
 
-
-
-
+ 
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+ 
