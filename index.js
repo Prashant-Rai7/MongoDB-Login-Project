@@ -10,9 +10,11 @@ const username = "prashantrai";
 const password = "zCmPag6EQfqlav0I";
 const cluster = "mongo-cluster";
 const dbname = "mongotask";
-const baseUrl = `mongodb+srv://${username}:${password}@${cluster}.qsxsrrt.mongodb.net/${dbname}?retryWrites=true&w=majority`;
+// const baseUrl = `mongodb+srv://${username}:${password}@${cluster}.qsxsrrt.mongodb.net/${dbname}?retryWrites=true&w=majority`;
 
-mongoose.connect(baseUrl);
+const url = `mongodb+srv://prashantrai:${password}@mongo-cluster.qsxsrrt.mongodb.net/${dbname}?retryWrites=true&w=majority`
+
+mongoose.connect(url);
 
 const db = mongoose.connection;
 try {

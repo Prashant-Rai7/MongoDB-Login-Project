@@ -26,7 +26,7 @@ app.get('/signup', (req,res) => {
 // post request sending data to server
 app.post('/login-data', async (req, res) => {
 
-    let userEmail = await signup_data.find({email:req.body.email}, {_id: 0, email:1})
+    let userEmail = await signup_data.find({ email:req.body.email}, {_id: 0, email:1})
     let userPassword = await signup_data.find({password: req.body.password}, {_id: 0, password:1})
     if(userEmail.length==0 || userPassword.length ==0){
         // res.status(404).send("User Not Found in Database")
